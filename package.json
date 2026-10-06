@@ -1,0 +1,20 @@
+{
+  "name": "pi-replay-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "教学用互斥锁优先级继承与传递捐赠回放后端（TypeScript + Node + SQLite）",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "cli": "node dist/cli.js",
+    "demo": "node dist/demo.js",
+    "test": "npm run build && npm run test:only",
+    "test:only": "tsc -p tsconfig.test.json && node --test dist-test/test/engine.test.js dist-test/test/store.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "typescript": "^5.9.3"
+  }
+}
+
